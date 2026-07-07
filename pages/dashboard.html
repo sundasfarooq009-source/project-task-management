@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Project & Task Management System</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dash-header">
+            <h2>Allied Software Engineers - Dashboard</h2>
+            <button onclick="window.location.href='../index.html'" class="btn-logout">Logout</button>
+        </header>
+
+        <!-- 2. Reports & Counters Section -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3>Total Projects</h3>
+                <p id="totalProjectsCount">1</p>
+            </div>
+            <div class="metric-card pending">
+                <h3>Pending Tasks</h3>
+                <p id="pendingTasksCount">0</p>
+            </div>
+            <div class="metric-card completed">
+                <h3>Completed Tasks</h3>
+                <p id="completedTasksCount">0</p>
+            </div>
+            <div class="metric-card overdue">
+                <h3>Overdue Tasks</h3>
+                <p id="overdueTasksCount">0</p>
+            </div>
+            <div class="metric-card progress-card">
+                <h3>Project Progress</h3>
+                <p id="progressPercentage">0%</p>
+            </div>
+        </section>
+
+        <div class="main-content-layout">
+            <!-- 3. Task Creation Form -->
+            <div class="form-section">
+                <h3>Create New Task</h3>
+                <form id="taskForm">
+                    <div class="input-group">
+                        <label>Task Title</label>
+                        <input type="text" id="taskTitle" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Assigned Employee</label>
+                        <input type="text" id="assignedEmployee" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Priority</label>
+                        <select id="taskPriority">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Due Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Status</label>
+                        <select id="taskStatus">
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                    <p id="formError" class="error-msg" style="color: red; display: none;"></p>
+                    <button type="submit" class="btn-submit-task">Add Task</button>
+                </form>
+            </div>
+
+            <!-- Filters & Task List Display -->
+            <div class="list-section">
+                <h3>Manage Tasks</h3>
+                <!-- Search & Filters -->
+                <div class="filters-container">
+                    <input type="text" id="searchEmployee" placeholder="Search by Employee Name...">
+                    <select id="filterPriority">
+                        <option value="All">All Priorities</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <select id="filterStatus">
+                        <option value="All">All Statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+
+                <!-- Task Table/List -->
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Employee</th>
+                                <th>Priority</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                  <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskTableBody">
+                            <!-- Tasks dynamically generated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script connected directly -->
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

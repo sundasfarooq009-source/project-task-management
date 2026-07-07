@@ -86,3 +86,131 @@ body {
 .btn-login:hover {
     background-color: #2b6cb0;
 }
+/* --- Dashboard Styles --- */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a365d;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-logout {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid #3182ce;
+}
+
+.metric-card.pending { border-top-color: #dd6b20; }
+.metric-card.completed { border-top-color: #38a169; }
+.metric-card.overdue { border-top-color: #e53e3e; }
+.metric-card.progress-card { border-top-color: #805ad5; }
+
+.metric-card h3 { font-size: 14px; color: #718096; margin-bottom: 5px; }
+.metric-card p { font-size: 24px; font-weight: bold; color: #2d3748; }
+
+.main-content-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content-layout { grid-template-columns: 1fr; }
+}
+
+.form-section, .list-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-section h3, .list-section h3 { margin-bottom: 15px; color: #2d3748; border-bottom: 2px solid #edf2f7; padding-bottom: 5px;}
+
+.btn-submit-task {
+    width: 100%;
+    background-color: #38a169;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filters-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filters-container input, .filters-container select {
+    padding: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.filters-container input { flex: 2; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 14px;
+}
+
+th { background-color: #f7fafc; color: #4a5568; }
+
+/* Business Logic Class for Highlight */
+.high-priority-overdue {
+    background-color: #fed7d7 !important;
+    border-left: 5px solid #e53e3e;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
