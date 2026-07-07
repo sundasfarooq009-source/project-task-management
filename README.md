@@ -3,7 +3,7 @@
 This is an advanced frontend prototype for internal employees, developed for Allied Software Engineers.
 
 ## Live Deployment
-- **Live URL**: [Paste your GitHub Pages URL here after deployment]
+- **Live URL**: [[Paste your GitHub Pages URL here after deployment](https://sundasfarooq009-source.github.io/project-task-management/)]
 
 ## Features Built
 - Secure Client Login UI with validation.
