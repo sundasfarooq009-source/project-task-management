@@ -1,0 +1,11 @@
+Test Case 1: Form Validation
+- Input: Empty Email or Password < 6 chars.
+- Expected Output: Error message displays under form. (PASSED)
+
+Test Case 2: Business Logic Constraint
+- Input: Due date earlier than Start Date.
+- Expected Output: Blocks form submission, shows validation error. (PASSED)
+
+Test Case 3: Priority Highlighting
+- Input: High priority task with an overdue past date.
+- Expected Output: Row highlighted in light red color. (PASSED)
